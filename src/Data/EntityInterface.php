@@ -2,8 +2,7 @@
 
 namespace Sienar\Data;
 
-interface EntityInterface
-{
+interface EntityInterface {
 	/**
 	 * Represents the unique ID of the entity
 	 *
@@ -16,13 +15,14 @@ interface EntityInterface
 	 *
 	 * @return int|null
 	 */
-	public function getVersion(): ?int;
+	public function getConcurrencyStamp(): ?int;
 
 	/**
 	 * Sets the new concurrency stamp of the entity
 	 *
-	 * @param int $version The new concurrency stamp
+	 * @param int $concurrencyStamp The new concurrency stamp
+	 *
 	 * @return void
 	 */
-	public function setVersion(int $version): void;
+	public function setConcurrencyStamp(int $concurrencyStamp): void;
 }

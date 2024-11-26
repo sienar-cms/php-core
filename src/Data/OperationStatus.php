@@ -2,8 +2,7 @@
 
 namespace Sienar\Data;
 
-enum OperationStatus : int
-{
+enum OperationStatus: int {
 	/**
 	 * Indicates that a hook or process was successful
 	 */

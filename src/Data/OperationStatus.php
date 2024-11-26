@@ -2,6 +2,9 @@
 
 namespace Sienar\Data;
 
+/**
+ * Represents different statuses with which a process can exit
+ */
 enum OperationStatus: int {
 	/**
 	 * Indicates that a hook or process was successful

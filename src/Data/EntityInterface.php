@@ -2,6 +2,9 @@
 
 namespace Sienar\Data;
 
+/**
+ * A base interface containing the getters and setters required by all entities in the app
+ */
 interface EntityInterface {
 	/**
 	 * Represents the unique ID of the entity

@@ -1,0 +1,13 @@
+# Symfony
+/.env.local
+/.env.*.local
+/var
+/vendor
+
+# PHPUnit
+/phpunit.xml
+.phpunit.result.cache
+
+# IDE
+.idea
+.vscode

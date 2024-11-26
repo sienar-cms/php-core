@@ -1,0 +1,21 @@
+{
+	"name": "sienar/core",
+	"description": "Core utilities used by Sienar applications",
+	"type": "library",
+	"license": "Apache-2.0",
+	"autoload": {
+		"psr-4": {
+			"Sienar\\": "src/"
+		}
+	},
+	"authors": [
+		{
+			"name": "Christian LeVesque",
+			"email": "christian@levesque.dev"
+		}
+	],
+	"require": {
+		"php": "^8.0",
+		"ext-json": "*"
+	}
+}

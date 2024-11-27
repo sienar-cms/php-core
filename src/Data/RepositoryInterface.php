@@ -16,7 +16,7 @@ interface RepositoryInterface {
 	 *
 	 * @return T|null The entity if it exists, else <code>null</code>
 	 */
-	public function read(int $id, ?Filter $filter = null): mixed;
+	public function read(int $id, ?Filter $filter = null): ?EntityInterface;
 
 	/**
 	 * Reads all entities from the datastore that satisfy the provided {@see Filter}
@@ -34,7 +34,7 @@ interface RepositoryInterface {
 	 *
 	 * @return int|null The entity's primary key if successful, else <code>null</code>
 	 */
-	public function create(mixed $entity): ?int;
+	public function create(EntityInterface $entity): ?int;
 
 	/**
 	 * Updates an existing entity in the datastore
@@ -43,7 +43,7 @@ interface RepositoryInterface {
 	 *
 	 * @return bool Whether the edit operation was successful
 	 */
-	public function update(mixed $entity): bool;
+	public function update(EntityInterface $entity): bool;
 
 	/**
 	 * Deletes an entity from the datastore

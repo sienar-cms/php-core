@@ -46,6 +46,15 @@ interface RepositoryInterface {
 	public function update(mixed $entity): bool;
 
 	/**
+	 * Deletes an entity from the datastore
+	 *
+	 * @param int $id The primary key of the entity to delete
+	 *
+	 * @return bool Whether the delete operation was successful
+	 */
+	public function delete(int $id): bool;
+
+	/**
 	 * Reads the concurrency stamp for the entity with the given ID
 	 *
 	 * @param int $id The ID of the entity

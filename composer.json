@@ -16,6 +16,7 @@
 	],
 	"require": {
 		"php": "^8.0",
-		"ext-json": "*"
+		"ext-json": "*",
+		"symfony/uid": "^7.2"
 	}
 }

@@ -4,14 +4,14 @@ namespace Sienar\Events;
 
 use Sienar\Data\OperationResult;
 
-interface AccessValidatorDispatcherInterface {
+interface AccessValidationDispatcherInterface {
 	/**
-	 * Runs access validation events for a hookable request
+	 * Dispatches the access validation event for a hookable request
 	 *
 	 * @param string $eventType The event to trigger
 	 * @param mixed $input The input to the event
 	 *
 	 * @return OperationResult<bool> Whether the validation was successful
 	 */
-	public function validate(string $eventType, mixed $input): OperationResult;
+	public function dispatch(string $eventType, mixed $input): OperationResult;
 }

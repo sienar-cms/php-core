@@ -6,10 +6,10 @@ use Psr\EventDispatcher\EventDispatcherInterface;
 use Psr\Log\LoggerInterface;
 use Sienar\Data\OperationResult;
 use Sienar\Data\OperationStatus;
-use Sienar\Events\AccessValidatorDispatcherInterface;
+use Sienar\Events\AccessValidationDispatcherInterface;
 use Sienar\Infrastructure\AccessValidationContext;
 
-class DefaultAccessValidationDispatcher implements AccessValidatorDispatcherInterface {
+class DefaultAccessValidationDispatcher implements AccessValidationDispatcherInterface {
 	public function __construct(
 		private readonly EventDispatcherInterface $dispatcher,
 		private readonly LoggerInterface $logger
@@ -18,7 +18,7 @@ class DefaultAccessValidationDispatcher implements AccessValidatorDispatcherInte
 	/**
 	 * @inheritDoc
 	 */
-	public function validate(string $eventType, mixed $input): OperationResult {
+	public function dispatch(string $eventType, mixed $input): OperationResult {
 		$context = new AccessValidationContext;
 
 		try {
